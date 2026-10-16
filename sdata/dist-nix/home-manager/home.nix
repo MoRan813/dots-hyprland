@@ -123,10 +123,6 @@ quickshell, home_attrs, ... }:
       kdePackages.systemsettings #systemsettings
 
       
-      ### illogical-impulse-microtex-git
-      # TODO: Not available as nixpkg
-
-
       ### illogical-impulse-portal
       #xdg-desktop-portal (Included elsewhere)
       #xdg-desktop-portal-kde (Included elsewhere)

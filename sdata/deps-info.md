@@ -39,7 +39,7 @@ Tips:
 - `cliphist`
   - Used in Hyprland and Quickshell config.
 - `cmake`
-  - Used in building quickshell and MicroTeX.
+  - Used in building quickshell.
 - `curl`
   - Used in Quickshell config.
 - `wget`
@@ -229,6 +229,3 @@ Extra dependencies.
 - [source](https://github.com/ful1e5/Bibata_Cursor)
 - Used in Hyprland config, not necessary.
 
-## illogical-impulse-microtex-git
-- [source](https://github.com/NanoMichael/MicroTeX)
-- This package will be installed as `/opt/MicroTeX`.

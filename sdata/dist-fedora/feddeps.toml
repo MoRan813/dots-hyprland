@@ -102,12 +102,6 @@ packages = [
   "plasma-systemsettings"
 ]
 
-# MicroTeX-git
-[groups.microtex]
-packages = [
-  "microtex"
-]
-
 # Portal
 [groups.portal]
 packages = [
