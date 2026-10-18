@@ -31,3 +31,4 @@ if status is-interactive
         alias ssh 'kitten ssh'
     end
 end
+fnm env --use-on-cd --shell fish | source
