@@ -1,0 +1,13 @@
+# 用户覆盖：雾凇拼音 (rime-ice)
+# schema_list 会完全替换 default.yaml 中的列表，所以要保留的方案都要写出来。
+patch:
+  schema_list:
+    - schema: rime_ice          # 雾凇拼音（全拼）
+    - schema: double_pinyin_flypy   # 小鹤双拼（备用）
+
+  # 方案选单（Rime switcher）热键：default.yaml 默认是 F4 / Ctrl+` / Ctrl+Shift+`
+  # F4 与 Ctrl+` 会和编辑器冲突（VS Code 切终端、JetBrains 快速切换方案），故移除这两条，
+  # 只留 Ctrl+Shift+` 作为打开方案选单的入口；彻底不要热键就改成 hotkeys: []，
+  # 之后只能从 fcitx5 托盘图标 → Rime 菜单里切换方案。
+  switcher/hotkeys:
+    - Control+Shift+grave
