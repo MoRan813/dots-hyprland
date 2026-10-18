@@ -478,14 +478,15 @@ ContentPage {
             }
         }
 
-        ConfigSwitch {
-            buttonIcon: "translate"
-            text: Translation.tr('Enable translator')
-            checked: Config.options.sidebar.translator.enable
-            onCheckedChanged: {
-                Config.options.sidebar.translator.enable = checked;
-            }
-        }
+        // 左侧栏已移除：翻译器开关不再有意义，整段停用
+        // ConfigSwitch {
+        //     buttonIcon: "translate"
+        //     text: Translation.tr('Enable translator')
+        //     checked: Config.options.sidebar.translator.enable
+        //     onCheckedChanged: {
+        //         Config.options.sidebar.translator.enable = checked;
+        //     }
+        // }
 
         ContentSubsection {
             title: Translation.tr("Quick toggles")

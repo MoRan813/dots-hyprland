@@ -63,7 +63,13 @@ Item {
 
     Process {
         id: translateProc
+        // 引擎由 Config.options.language.translator.engine 指定：
+        // 默认 "auto" 会挑 google，而本机到 translate.google.com 不通（会挂住无输出），
+        // 故配置里固定为 bing。改成 "auto" 即恢复 trans 自己的选择逻辑。
         command: ["bash", "-c", `trans -brief -no-bidi`
+            + (Config.options.language.translator.engine && Config.options.language.translator.engine !== "auto"
+                ? ` -engine '${StringUtils.shellSingleQuoteEscape(Config.options.language.translator.engine)}'`
+                : "")
             + ` -source '${StringUtils.shellSingleQuoteEscape(root.sourceLanguage)}'`
             + ` -target '${StringUtils.shellSingleQuoteEscape(root.targetLanguage)}'`
             + ` '${StringUtils.shellSingleQuoteEscape(root.inputField.text.trim())}'`]
