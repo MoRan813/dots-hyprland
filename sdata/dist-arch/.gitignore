@@ -1,3 +1,5 @@
 /*/*.tar.*
 /*/pkg/
 /*/src/
+# makepkg 为 VCS 源(<pkg>/ 下)留的上游裸克隆，例如 illogical-impulse-microtex-git/MicroTeX/
+/*/*/
