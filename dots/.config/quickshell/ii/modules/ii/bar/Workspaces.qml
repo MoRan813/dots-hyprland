@@ -257,7 +257,10 @@ ButtonMouseArea {
                             implicitWidth: appIcon.implicitWidth
                             implicitHeight: appIcon.implicitHeight
                             colorizationColor: Appearance.m3colors.darkmode ? Appearance.colors.colOnSecondaryContainer : Appearance.colors.colOnPrimary
-                            colorization: Config.options.bar.workspaces.monochromeIcons ? 0.8 : 0.5
+                            // 0.5 used to leave real-colour icons half-tinted, which flattens
+                            // low-contrast logos (Zen's dark tile with thin light rings) into an
+                            // unreadable blob. With monochrome icons off, show the artwork as is.
+                            colorization: Config.options.bar.workspaces.monochromeIcons ? 0.8 : 0
                             brightness: 0
                             source: appIcon
 
